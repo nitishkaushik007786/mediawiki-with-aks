@@ -1,0 +1,17 @@
+apiVersion: v2
+name: mediawiki
+version: 0.1.0
+appVersion: 1.0.0
+dependencies:
+  - name: storage
+    version: "0.1.0"
+    repository: "file://./mediwiki/pvc"
+    enabled: true
+  - name: mysql
+    version: "0.1.0"
+    repository: "file://./mediwiki/database"
+    enabled: true
+  - name: mediawiki
+    version: "0.1.0"
+    repository: "file://./mediwiki/mediawikideployment"
+    enabled: true
