@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: mysql:5.6
+  repository: mariadb
   pullPolicy: Always
   tag: latest
   # Overrides the image tag whose default is the chart appVersion.
