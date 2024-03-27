@@ -1,0 +1,57 @@
+replicaCount: 1
+
+image:
+  repository: mediawiki
+  pullPolicy: Always
+  tag: latest
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: LoadBalancer
+  port: 80
+
+namespace: mediawiki
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart.local
+      paths: []
+  tls: []
+
+resources: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 70
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+containers:
+  requests:
+    cpu: 500m
+    memory: 1G
+  limits:
+    cpu: 1000m
+    memory: 2G
